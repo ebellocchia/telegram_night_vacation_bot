@@ -5,7 +5,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Set the working directory inside the container
-WORKDIR /code/bot
+WORKDIR /code/app
 
 # Install system dependencies required for compiling C-based Python packages
 RUN apt-get update && apt-get install -y \
