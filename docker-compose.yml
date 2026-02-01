@@ -1,0 +1,17 @@
+services:
+  telegram-vacation-night-bot:
+    build: .
+    container_name: telegram_vacation_night_bot_container
+    environment:
+      - TZ=Europe/Rome
+    restart: unless-stopped
+
+    volumes:
+      - ./data/logs:/code/bot/logs
+      - ./data/session:/code/bot/session
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

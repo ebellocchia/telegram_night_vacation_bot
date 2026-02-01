@@ -1,0 +1,31 @@
+build
+package-lock.json
+*.pyc
+*.pyo
+__pycache__/
+*.session
+*.session-journal
+*.session-shm
+*.session-wal
+*.txt
+*.json
+*.xml
+*.iml
+.idea
+*.egg-info
+
+# Environments
+.idea
+.env
+.venv
+env/
+venv/
+
+# mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+!requirements-dev.txt
+!requirements.txt
