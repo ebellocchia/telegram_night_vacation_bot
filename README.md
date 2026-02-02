@@ -59,23 +59,23 @@ To configure the bot, just edit the `BotConfig` class (`telegram_night_vacation_
 The list of all possible configuration elements is shown below.
 
 |Name| Description |
-|---|-------------------------------------------------------------------------------------------------------------------------------------|
-|`API_ID`|API ID from [https://my.telegram.org/apps](https://my.telegram.org/apps)|
-|`API_HASH`|API hash from [https://my.telegram.org/apps](https://my.telegram.org/apps)|
-|`BOT_TOKEN`|Bot token from *BotFather*|
-|`SESSION_NAME`|Name of the file used to store the session|
+|---|---|
+|`API_ID`|API ID from [https://my.telegram.org/apps](https://my.telegram.org/apps).|
+|`API_HASH`|API hash from [https://my.telegram.org/apps](https://my.telegram.org/apps).|
+|`BOT_TOKEN`|Bot token from *BotFather*.|
+|`SESSION_NAME`|Path of the file used to store the session.|
 |`LOG_LEVEL`|Log level, same of python logging (`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`)|
-|`LOG_USE_FILE`|If true, logs will be written to a file, if false they'll be written to the console|
-|`LOG_FILE_NAME`|Log file name (only if `LOG_USE_FILE` is True)|
-|`NIGHT_BEGIN_HOUR`|Night begin hour, integer value (e.g. __22 -> 22:00__)|
-|`NIGHT_END_HOUR`|Night end hour, integer value (e.g. __8 -> 8:00__)|
-|`VACATION_WEEK_DAYS`|List of days of the week considered "vacation" (__0: Monday, 1: Tuesday, 2: Wednesday, ..., 6: Sunday__)|
+|`LOG_USE_FILE`|If true, logs will be written to a file, if false they'll be written to the console.|
+|`LOG_FILE_NAME`|Log file name (only if `LOG_USE_FILE` is True).|
+|`NIGHT_BEGIN_HOUR`|Night begin hour, integer value (e.g. __22 -> 22:00__).|
+|`NIGHT_END_HOUR`|Night end hour, integer value (e.g. __8 -> 8:00__).|
+|`VACATION_WEEK_DAYS`|List of days of the week considered "vacation" (__0: Monday, 1: Tuesday, 2: Wednesday, ..., 6: Sunday__).|
 |`VACATION_DATES`|List of dates considered "vacation". The list of days is specified for a month (format: __month: [day_1, day_2, ...]__).|
 |`CHAT_ID`|ID of the group. Run the bot in test mode to get the topic IDs.|
 |`NIGHT_TOPIC_IDS`|IDs of the topics where the night mode is activated. Run the bot in test mode to get the topic IDs.|
 |`VACATION_TOPIC_IDS`|IDs of the topics where the vacation mode is activated. Run the bot in test mode to get the topic IDs.|
-|`AUTHORIZED_USERS`|List of users that are authorized to use the bot (user IDs or usernames)|
-|`EXCLUDED_USERS`|List of users that are excluded from night/vacation mode, i.e. who can still write during night or vacation (user IDs or usernames)|
+|`AUTHORIZED_USERS`|List of users that are authorized to use the bot (user IDs and/or usernames).|
+|`EXCLUDED_USERS`|List of users that are excluded from night/vacation mode, i.e. who can still write during night or vacation (user IDs and/or usernames).|
 
 If the group has no topics, there will be only one topic with ID `0`.
 
