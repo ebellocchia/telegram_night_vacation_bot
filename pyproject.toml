@@ -38,8 +38,9 @@ Changelog = "https://github.com/ebellocchia/telegram_night_vacation_bot/blob/mas
 Repository = "https://github.com/ebellocchia/telegram_night_vacation_bot"
 Download = "https://github.com/ebellocchia/telegram_night_vacation_bot/archive/v{version}.tar.gz"
 
-[tool.setuptools]
-packages = {find = {}}
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["data*", "build*", "dist*"]
 
 [tool.setuptools.dynamic]
 version = {attr = "telegram_night_vacation_bot._version.__version__"}
