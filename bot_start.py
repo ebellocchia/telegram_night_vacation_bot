@@ -18,20 +18,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-#
-# Imports
-#
 import asyncio
 import sys
 
 from telegram_night_vacation_bot import Bot, BotTypes, __version__
 
 
-#
-# Functions
-#
-
-# Print header
 def print_header() -> None:
     """Print the bot header with version information."""
     print("")
@@ -58,7 +50,5 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    # Print header
     print_header()
-    # Run async main
     asyncio.run(main())
