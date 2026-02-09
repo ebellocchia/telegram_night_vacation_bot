@@ -40,7 +40,7 @@ Download = "https://github.com/ebellocchia/telegram_night_vacation_bot/archive/v
 
 [tool.setuptools.packages.find]
 where = ["."]
-exclude = ["data*", "build*", "dist*"]
+exclude = ["data*", "build*", "dist*", "venv*"]
 
 [tool.setuptools.dynamic]
 version = {attr = "telegram_night_vacation_bot._version.__version__"}
