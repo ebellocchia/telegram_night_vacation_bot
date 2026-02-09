@@ -39,7 +39,7 @@ def print_header() -> None:
     print("****                               ****")
     print("***                                 ***")
     print("**                                   **")
-    print("*     Telegram Vacation/Night Bot     *")
+    print("*     Telegram Night/Vacation Bot     *")
     print("*     Author: Emanuele Bellocchia     *")
     print(f"*           Version: {__version__}            *")
     print("**                                   **")
