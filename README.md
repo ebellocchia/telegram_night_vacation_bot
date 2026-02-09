@@ -2,11 +2,12 @@
 
 [![Code Analysis](https://github.com/ebellocchia/telegram_night_vacation_bot/actions/workflows/code-analysis.yml/badge.svg)](https://github.com/ebellocchia/telegram_night_vacation_bot/actions/workflows/code-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/ebellocchia/telegram_night_vacation_bot/badge)](https://www.codefactor.io/repository/github/ebellocchia/telegram_night_vacation_bot)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9f36e29d82474ed8bd2748db6c579068)](https://app.codacy.com/gh/ebellocchia/telegram_night_vacation_bot/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![GitHub License](https://img.shields.io/github/license/ebellocchia/telegram_night_vacation_bot?label=License)](https://github.com/ebellocchia/telegram_night_vacation_bot?tab=MIT-1-ov-file)
 
 ## Introduction
 
-Telegram bot for managing night and vacation modes in groups based on *pyrogram*.\
+Telegram bot for managing night and vacation modes in groups based on *pyrotgfork* (a maintained fork of the *pyrogram* library).\
 During night or vacation days (both configurable), the bot automatically deletes every message sent in the chat.
 
 The bot supports topics: it can activate night or vacation mode in all or only some topics (it also works with no topics, of course).\
