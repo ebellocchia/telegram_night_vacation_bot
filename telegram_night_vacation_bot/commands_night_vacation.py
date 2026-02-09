@@ -56,9 +56,7 @@ class CommandsNightVacation:
         self.night_vacation = VacationNight(bot_type, tg_client)
 
     async def Init(self) -> None:
-        """
-        Initialize and register all command handlers.
-        """
+        """Initialize and register all command handlers."""
         await self.night_vacation.Init()
         self.tg_client.AddHandler(
             MessageHandler(self.__CommandHelp, filters.command(["start"]) & filters.private)

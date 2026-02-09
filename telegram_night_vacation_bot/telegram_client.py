@@ -96,9 +96,7 @@ class TelegramClient:
         self.client.add_handler(handler)
 
     async def Run(self) -> None:
-        """
-        Start the Telegram client.
-        """
+        """Start the Telegram client."""
         async with self.client:
             await idle()
 

@@ -67,9 +67,7 @@ class VacationNight:
         self.scheduler = AsyncIOScheduler()
 
     async def Init(self) -> None:
-        """
-        Initialize and start the scheduler.
-        """
+        """Initialize and start the scheduler."""
         self.scheduler.start()
 
     async def Start(
