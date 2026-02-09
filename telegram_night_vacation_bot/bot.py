@@ -37,7 +37,8 @@ class Bot:
         self,
         bot_type: BotTypes
     ) -> None:
-        """Initialize the bot with the specified type.
+        """
+        Initialize the bot with the specified type.
 
         Args:
             bot_type: The type of bot (TEST or NORMAL).
@@ -67,7 +68,8 @@ class Bot:
     def __LogConfig(
         bot_type: BotTypes
     ) -> None:
-        """Log the bot configuration.
+        """
+        Log the bot configuration.
 
         Args:
             bot_type: The type of bot being configured.

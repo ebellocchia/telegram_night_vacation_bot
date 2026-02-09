@@ -47,7 +47,8 @@ class TelegramClient:
         api_id: str,
         api_hash: str
     ) -> None:
-        """Initialize the Telegram client.
+        """
+        Initialize the Telegram client.
 
         Args:
             session_name: Name of the session file.
@@ -64,7 +65,8 @@ class TelegramClient:
 
     @staticmethod
     def AnonymousUserId() -> int:
-        """Get the ID used for anonymous users.
+        """
+        Get the ID used for anonymous users.
 
         Returns:
             int: The anonymous user ID constant.
@@ -73,7 +75,8 @@ class TelegramClient:
 
     @staticmethod
     def TopicNoneId() -> int:
-        """Get the ID representing no topic.
+        """
+        Get the ID representing no topic.
 
         Returns:
             int: The topic none ID constant.
@@ -84,7 +87,8 @@ class TelegramClient:
         self,
         handler: Any
     ) -> None:
-        """Add a message handler to the client.
+        """
+        Add a message handler to the client.
 
         Args:
             handler: The handler to add.
@@ -92,7 +96,9 @@ class TelegramClient:
         self.client.add_handler(handler)
 
     async def Run(self) -> None:
-        """Start the Telegram client."""
+        """
+        Start the Telegram client.
+        """
         async with self.client:
             await idle()
 
@@ -102,7 +108,8 @@ class TelegramClient:
         topic_id: Optional[int],
         message_text: str,
     ) -> List[pyrogram.types.Message]:
-        """Send a message to a chat, splitting if necessary.
+        """
+        Send a message to a chat, splitting if necessary.
 
         Args:
             chat_id: The chat ID to send the message to.
@@ -128,7 +135,8 @@ class TelegramClient:
         message: pyrogram.types.Message,
         message_text: str,
     ) -> List[pyrogram.types.Message]:
-        """Send a message to the same chat as the original message.
+        """
+        Send a message to the same chat as the original message.
 
         Args:
             message: The original message to extract chat and topic ID from.
@@ -148,7 +156,8 @@ class TelegramClient:
         original_message: pyrogram.types.Message,
         message_text: str
     ) -> List[pyrogram.types.Message]:
-        """Send a reply to a message, splitting if necessary.
+        """
+        Send a reply to a message, splitting if necessary.
 
         Args:
             original_message: The message to reply to.
@@ -178,7 +187,8 @@ class TelegramClient:
         chat_id: int,
         message_ids: List[int]
     ) -> None:
-        """Delete messages from a chat.
+        """
+        Delete messages from a chat.
 
         Args:
             chat_id: The chat ID.
@@ -190,7 +200,8 @@ class TelegramClient:
             pass
 
     async def Me(self) -> pyrogram.types.User:
-        """Get the bot's user information.
+        """
+        Get the bot's user information.
 
         Returns:
             The bot's user object.
@@ -198,7 +209,8 @@ class TelegramClient:
         return await self.client.get_me()
 
     async def MyUsername(self) -> str:
-        """Get the bot's username.
+        """
+        Get the bot's username.
 
         Returns:
             The bot's username.
@@ -210,7 +222,8 @@ class TelegramClient:
         self,
         message: pyrogram.types.Message
     ) -> bool:
-        """Check if the bot was mentioned in a message.
+        """
+        Check if the bot was mentioned in a message.
 
         Args:
             message: The message to check.
@@ -227,7 +240,8 @@ class TelegramClient:
         self,
         message: pyrogram.types.Message
     ) -> bool:
-        """Check if a message is a reply to the bot.
+        """
+        Check if a message is a reply to the bot.
 
         Args:
             message: The message to check.
@@ -245,7 +259,8 @@ class TelegramClient:
     def GetChatFromMessage(
         message: pyrogram.types.Message
     ) -> pyrogram.types.Chat:
-        """Get the chat object from a message.
+        """
+        Get the chat object from a message.
 
         Args:
             message: The message.
@@ -259,7 +274,8 @@ class TelegramClient:
     def GetChatIdFromMessage(
         message: pyrogram.types.Message
     ) -> int:
-        """Get the chat ID from a message.
+        """
+        Get the chat ID from a message.
 
         Args:
             message: The message.
@@ -273,7 +289,8 @@ class TelegramClient:
     def GetUserFromMessage(
         message: pyrogram.types.Message
     ) -> Optional[pyrogram.types.User]:
-        """Get the user object from a message.
+        """
+        Get the user object from a message.
 
         Args:
             message: The message.
@@ -288,7 +305,8 @@ class TelegramClient:
         cls,
         message: pyrogram.types.Message
     ) -> int:
-        """Get the user ID from a message.
+        """
+        Get the user ID from a message.
 
         Args:
             message: The message.
@@ -304,7 +322,8 @@ class TelegramClient:
         cls,
         message: pyrogram.types.Message
     ) -> bool:
-        """Check if the message sender is anonymous.
+        """
+        Check if the message sender is anonymous.
 
         Args:
             message: The message.
@@ -319,7 +338,8 @@ class TelegramClient:
         cls,
         message: pyrogram.types.Message
     ) -> bool:
-        """Check if the message sender is a bot.
+        """
+        Check if the message sender is a bot.
 
         Args:
             message: The message.
@@ -333,7 +353,8 @@ class TelegramClient:
     def IsPrivateChat(
             message: pyrogram.types.Message
     ) -> bool:
-        """Check if the message is from a private chat.
+        """
+        Check if the message is from a private chat.
 
         Args:
             message: The message.
@@ -350,7 +371,8 @@ class TelegramClient:
         message: pyrogram.types.Message,
         text: str
     ) -> None:
-        """Append text to a message's text or caption.
+        """
+        Append text to a message's text or caption.
 
         Args:
             message: The message to modify.
@@ -367,7 +389,8 @@ class TelegramClient:
         message: pyrogram.types.Message,
         text: str
     ) -> None:
-        """Append text to a message if the text is not already present.
+        """
+        Append text to a message if the text is not already present.
 
         Args:
             message: The message to modify.
@@ -382,7 +405,8 @@ class TelegramClient:
         old_text: str,
         new_text: str
     ) -> None:
-        """Replace text in a message's text or caption.
+        """
+        Replace text in a message's text or caption.
 
         Args:
             message: The message to modify.
@@ -398,7 +422,8 @@ class TelegramClient:
     def GetTextFromMessage(
         message: pyrogram.types.Message
     ) -> str:
-        """Get the text content from a message.
+        """
+        Get the text content from a message.
 
         Args:
             message: The message.
@@ -416,7 +441,8 @@ class TelegramClient:
     def GetTopicIdFromMessage(
         message: pyrogram.types.Message
     ) -> int:
-        """Get the topic ID from a message.
+        """
+        Get the topic ID from a message.
 
         Args:
             message: The message.
@@ -438,7 +464,8 @@ class TelegramClient:
         cls,
         user: Optional[pyrogram.types.User]
     ) -> str:
-        """Get the full name of a user.
+        """
+        Get the full name of a user.
 
         Args:
             user: The user object.
@@ -458,7 +485,8 @@ class TelegramClient:
     def GetUserIdFromUser(
         user: Optional[pyrogram.types.User]
     ) -> int:
-        """Get the ID from a user object.
+        """
+        Get the ID from a user object.
 
         Args:
             user: The user object.
@@ -472,7 +500,8 @@ class TelegramClient:
     def GetUsernameFromUser(
         user: Optional[pyrogram.types.User]
     ) -> str:
-        """Get the username from a user object.
+        """
+        Get the username from a user object.
 
         Args:
             user: The user object.
@@ -491,7 +520,8 @@ class TelegramClient:
         default_val: Any,
         conv_fct: Callable[[str], Any] = str
     ) -> Any:
-        """Get a command parameter from a message with type conversion.
+        """
+        Get a command parameter from a message with type conversion.
 
         Args:
             message: The message containing the command.
@@ -511,7 +541,8 @@ class TelegramClient:
     def __SplitMessageText(
         message_text: str
     ) -> List[str]:
-        """Split a long message text into multiple parts respecting Telegram's limits.
+        """
+        Split a long message text into multiple parts respecting Telegram's limits.
 
         Args:
             message_text: The message text to split.

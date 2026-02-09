@@ -44,7 +44,8 @@ class CommandsNightVacation:
         bot_type: BotTypes,
         tg_client: TelegramClient
     ) -> None:
-        """Initialize the commands handler.
+        """
+        Initialize the commands handler.
 
         Args:
             bot_type: The type of bot (TEST or NORMAL).
@@ -55,7 +56,9 @@ class CommandsNightVacation:
         self.night_vacation = VacationNight(bot_type, tg_client)
 
     async def Init(self) -> None:
-        """Initialize and register all command handlers."""
+        """
+        Initialize and register all command handlers.
+        """
         await self.night_vacation.Init()
         self.tg_client.AddHandler(
             MessageHandler(self.__CommandHelp, filters.command(["start"]) & filters.private)
@@ -100,7 +103,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the help command to show available commands.
+        """
+        Handle the help command to show available commands.
 
         Args:
             client: The Pyrogram client instance.
@@ -116,7 +120,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the alive command to check if bot is responsive.
+        """
+        Handle the alive command to check if bot is responsive.
 
         Args:
             client: The Pyrogram client instance.
@@ -132,7 +137,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the version command to show bot version.
+        """
+        Handle the version command to show bot version.
 
         Args:
             client: The Pyrogram client instance.
@@ -148,7 +154,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the start command to activate the bot.
+        """
+        Handle the start command to activate the bot.
 
         Args:
             client: The Pyrogram client instance.
@@ -164,7 +171,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the stop command to deactivate the bot.
+        """
+        Handle the stop command to deactivate the bot.
 
         Args:
             client: The Pyrogram client instance.
@@ -180,7 +188,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the status command to show bot running status.
+        """
+        Handle the status command to show bot running status.
 
         Args:
             client: The Pyrogram client instance.
@@ -196,7 +205,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the vacation status command to check if vacation mode is active.
+        """
+        Handle the vacation status command to check if vacation mode is active.
 
         Args:
             client: The Pyrogram client instance.
@@ -212,7 +222,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the night status command to check if night mode is active.
+        """
+        Handle the night status command to check if night mode is active.
 
         Args:
             client: The Pyrogram client instance.
@@ -228,7 +239,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the test vacation command to test vacation notifications.
+        """
+        Handle the test vacation command to test vacation notifications.
 
         Args:
             client: The Pyrogram client instance.
@@ -244,7 +256,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle the test night command to test night notifications.
+        """
+        Handle the test night command to test night notifications.
 
         Args:
             client: The Pyrogram client instance.
@@ -260,7 +273,8 @@ class CommandsNightVacation:
         client: pyrogram.Client,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle incoming group messages.
+        """
+        Handle incoming group messages.
 
         Args:
             client: The Pyrogram client instance.
@@ -273,7 +287,8 @@ class CommandsNightVacation:
         self,
         message: pyrogram.types.Message
     ) -> bool:
-        """Check if the user is authorized to use the bot.
+        """
+        Check if the user is authorized to use the bot.
 
         Args:
             message: The message to check authorization for.
@@ -294,7 +309,8 @@ class CommandsNightVacation:
         self,
         message: pyrogram.types.Message
     ) -> None:
-        """Log message details in test mode.
+        """
+        Log message details in test mode.
 
         Args:
             message: The message to log.

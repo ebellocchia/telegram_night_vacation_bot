@@ -29,7 +29,8 @@ class BotTypes(IntEnum):
     PRODUCTION = 1
 
     def IsTest(self):
-        """Check if the bot is in test mode.
+        """
+        Check if the bot is in test mode.
 
         Returns:
             bool: True if bot type is TEST, False otherwise.
@@ -37,7 +38,8 @@ class BotTypes(IntEnum):
         return self == BotTypes.TEST
 
     def IsProduction(self):
-        """Check if the bot is in production mode.
+        """
+        Check if the bot is in production mode.
 
         Returns:
             bool: True if bot type is PRODUCTION, False otherwise.

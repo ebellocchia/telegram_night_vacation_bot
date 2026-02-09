@@ -53,7 +53,8 @@ class VacationNight:
         bot_type: BotTypes,
         tg_client: TelegramClient
     ) -> None:
-        """Initialize the vacation/night mode manager.
+        """
+        Initialize the vacation/night mode manager.
 
         Args:
             bot_type: The type of bot (TEST or NORMAL).
@@ -66,14 +67,17 @@ class VacationNight:
         self.scheduler = AsyncIOScheduler()
 
     async def Init(self) -> None:
-        """Initialize and start the scheduler."""
+        """
+        Initialize and start the scheduler.
+        """
         self.scheduler.start()
 
     async def Start(
         self,
         message: pyrogram.types.Message
     ) -> None:
-        """Start the vacation/night mode monitoring.
+        """
+        Start the vacation/night mode monitoring.
 
         Args:
             message: The message that triggered the start command.
@@ -101,7 +105,8 @@ class VacationNight:
         self,
         message: pyrogram.types.Message
     ) -> None:
-        """Stop the vacation/night mode monitoring.
+        """
+        Stop the vacation/night mode monitoring.
 
         Args:
             message: The message that triggered the stop command.
@@ -117,7 +122,8 @@ class VacationNight:
         self,
         message: pyrogram.types.Message
     ) -> None:
-        """Check and report if the bot is running.
+        """
+        Check and report if the bot is running.
 
         Args:
             message: The message that triggered the status command.
@@ -131,7 +137,8 @@ class VacationNight:
         self,
         message: pyrogram.types.Message
     ) -> None:
-        """Check and report if night mode is active.
+        """
+        Check and report if night mode is active.
 
         Args:
             message: The message that triggered the night status command.
@@ -145,7 +152,8 @@ class VacationNight:
         self,
         message: pyrogram.types.Message
     ) -> None:
-        """Check and report if vacation mode is active.
+        """
+        Check and report if vacation mode is active.
 
         Args:
             message: The message that triggered the vacation status command.
@@ -159,7 +167,8 @@ class VacationNight:
         self,
         message: pyrogram.types.Message
     ) -> None:
-        """Test vacation mode notifications.
+        """
+        Test vacation mode notifications.
 
         Args:
             message: The message that triggered the test command.
@@ -170,7 +179,8 @@ class VacationNight:
         self,
         message: pyrogram.types.Message
     ) -> None:
-        """Test night mode notifications.
+        """
+        Test night mode notifications.
 
         Args:
             message: The message that triggered the test command.
@@ -181,7 +191,8 @@ class VacationNight:
         self,
         message: pyrogram.types.Message
     ) -> None:
-        """Handle incoming messages and delete if necessary.
+        """
+        Handle incoming messages and delete if necessary.
 
         Args:
             message: The incoming message.
@@ -202,7 +213,8 @@ class VacationNight:
                 await self.tg_client.DeleteMessages(message.chat.id, [message.id])
 
     def __IsRunning(self) -> bool:
-        """Check if the scheduler jobs are running.
+        """
+        Check if the scheduler jobs are running.
 
         Returns:
             True if both jobs are running, False otherwise.
@@ -214,7 +226,8 @@ class VacationNight:
         self,
         message: pyrogram.types.Message
     ) -> bool:
-        """Check if the user should be subject to night/vacation mode.
+        """
+        Check if the user should be subject to night/vacation mode.
 
         Args:
             message: The message to check.
@@ -242,7 +255,8 @@ class VacationNight:
 
     @staticmethod
     def __IsNight() -> bool:
-        """Check if it's currently night time.
+        """
+        Check if it's currently night time.
 
         Returns:
             True if current hour is within night hours, False otherwise.
@@ -252,7 +266,8 @@ class VacationNight:
 
     @staticmethod
     def __IsNightHour() -> bool:
-        """Check if current hour is a night boundary hour.
+        """
+        Check if current hour is a night boundary hour.
 
         Returns:
             True if current hour is night begin or end hour, False otherwise.
@@ -262,7 +277,8 @@ class VacationNight:
 
     @staticmethod
     def __IsVacationDay() -> bool:
-        """Check if today is a vacation day.
+        """
+        Check if today is a vacation day.
 
         Returns:
             True if today is a vacation day, False otherwise.
@@ -281,7 +297,8 @@ class VacationNight:
         chat_id: int,
         topic_id: int
     ) -> bool:
-        """Determine if a message should be deleted based on current mode.
+        """
+        Determine if a message should be deleted based on current mode.
 
         Args:
             chat_id: The chat ID.
@@ -303,7 +320,8 @@ class VacationNight:
         chat_id: int,
         force: bool = False
     ) -> bool:
-        """Send night mode notifications to configured topics.
+        """
+        Send night mode notifications to configured topics.
 
         Args:
             chat_id: The chat ID to send notifications to.
@@ -343,7 +361,8 @@ class VacationNight:
         chat_id: int,
         force: bool = False
     ) -> bool:
-        """Send vacation mode notifications to configured topics.
+        """
+        Send vacation mode notifications to configured topics.
 
         Args:
             chat_id: The chat ID to send notifications to.

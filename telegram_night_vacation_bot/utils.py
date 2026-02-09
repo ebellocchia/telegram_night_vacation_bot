@@ -27,7 +27,8 @@ class Utils:
 
     @staticmethod
     def Today() -> datetime:
-        """Get the current date and time.
+        """
+        Get the current date and time.
 
         Returns:
             datetime: The current datetime object.
@@ -36,7 +37,8 @@ class Utils:
 
     @staticmethod
     def CurrentDay() -> int:
-        """Get the current day of the month.
+        """
+        Get the current day of the month.
 
         Returns:
             int: The current day (1-31).
@@ -45,7 +47,8 @@ class Utils:
 
     @staticmethod
     def CurrentHour() -> int:
-        """Get the current hour of the day.
+        """
+        Get the current hour of the day.
 
         Returns:
             int: The current hour (0-23).
@@ -54,7 +57,8 @@ class Utils:
 
     @staticmethod
     def CurrentMonth() -> int:
-        """Get the current month.
+        """
+        Get the current month.
 
         Returns:
             int: The current month (1-12).
@@ -63,7 +67,8 @@ class Utils:
 
     @staticmethod
     def CurrentTime() -> float:
-        """Get the current Unix timestamp.
+        """
+        Get the current Unix timestamp.
 
         Returns:
             float: The current time in seconds since the epoch.
