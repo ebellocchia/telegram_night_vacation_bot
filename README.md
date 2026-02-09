@@ -1,5 +1,9 @@
 # Telegram Night Vacation Bot
 
+[![Code Analysis](https://github.com/ebellocchia/telegram_night_vacation_bot/actions/workflows/code-analysis.yml/badge.svg)](https://github.com/ebellocchia/telegram_night_vacation_bot/actions/workflows/code-analysis.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/ebellocchia/telegram_night_vacation_bot/badge)](https://www.codefactor.io/repository/github/ebellocchia/telegram_night_vacation_bot)
+[![GitHub License](https://img.shields.io/github/license/ebellocchia/telegram_night_vacation_bot?label=License)](https://github.com/ebellocchia/telegram_night_vacation_bot?tab=MIT-1-ov-file)
+
 ## Introduction
 
 Telegram bot for managing night and vacation modes in groups based on *pyrogram*.\
