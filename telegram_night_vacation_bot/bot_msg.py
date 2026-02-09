@@ -28,8 +28,8 @@ The bot is alive."""
     HELP: str = """🤖 Hello! 🤖
 Commands for **night/vacation** control:
 
-**/nvbot_help**: __show this message__
-**/nvbot_alive**: __check if the bot is alive__
+**/help**: __show this message__
+**/alive**: __check if the bot is alive__
 **/nvbot_start**: __start bot__
 **/nvbot_stop**: __stop bot__
 **/nvbot_status**: __show if bot is started or not__

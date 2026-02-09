@@ -62,10 +62,10 @@ class CommandsNightVacation:
             MessageHandler(self.__CommandHelp, filters.command(["start"]) & filters.private)
         )
         self.tg_client.AddHandler(
-            MessageHandler(self.__CommandHelp, filters.command(["nvbot_help"]))
+            MessageHandler(self.__CommandHelp, filters.command(["help"]))
         )
         self.tg_client.AddHandler(
-            MessageHandler(self.__CommandAlive, filters.command(["nvbot_alive"]))
+            MessageHandler(self.__CommandAlive, filters.command(["alive"]))
         )
         self.tg_client.AddHandler(
             MessageHandler(self.__CommandStart, filters.command(["nvbot_start"]))

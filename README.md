@@ -89,8 +89,8 @@ Every configuration element is documented inside the class.
 ## Supported Commands
 
 List of supported commands:
-- `vnbot_help`: show the list of supported commands
-- `vnbot_alive`: show if bot is alive
+- `help`: show the list of supported commands
+- `alive`: show if bot is alive
 - `nvbot_start`: start the bot (i.e. start notifying night and vacation, deleting messages during night and vacation)
 - `nvbot_stop`: stop the bot (i.e. stop notifying night and vacation, deleting messages during night and vacation)
 - `nvbot_status`: show if bot is currently started or not
