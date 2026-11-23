@@ -1,3 +1,7 @@
+# 0.2.0
+
+- Add Python 3.14 support
+
 # 0.1.1
 
 - Rename commands `/nvbot_help` and `/nvbot_alive` to `/help` and `/alive`
